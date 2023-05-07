@@ -1,36 +1,60 @@
 # dotfiles
-Dotfiles
 
-TODO:
+* DE: XFCE4
+* WM: AwesomeWM
+* Terminal: kitty/alacritty
+* Editor: nvim
 
-* AwesomeWM [https://github.com/awesomeWM/awesome]
-* picom (fork) https://github.com/jonaburg/picom
-* SDDM [https://github.com/sddm/sddm]
-* SDDM theme: [https://framagit.org/MarianArlt/sddm-sugar-candy]
+XFCE is quite lightweight and I don't have the time to setup polybar/audio/network/laptop related stuff.
 
-Installation from Debian 11.6 netinst (NO DE)
+Installation from Debian 11.6 netinst (DE = xfce4)
 
-su -
-apt install sudo
-usermod -aG sudo hmrh
+<br>
 
+### Post install
+
+##### Add user to sudoers
+    su -
+    apt install sudo
+    usermod -aG sudo [user]
 *reboot*
 
-sudo apt install xorg build-essential git meson cmake dkms linux-headers-$(uname -r) python3-venv
+<br>
 
-[PICOM]
-sudo apt install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev  libpcre2-dev  libevdev-dev uthash-dev libev-dev libx11-xcb-dev libpcre++-dev
+##### Install some dependencies we need later
+    sudo apt install build-essential git meson cmake dkms linux-headers-$(uname -r) python3-venv
 
-git clone https://github.com/jonaburg/picom
-cd picom
-meson --buildtype=release . build
-ninja -C build
-# To install the binaries in /usr/local/bin (optional)
-sudo ninja -C build install
+<br>
 
-[AwesomeWM]
-sudo apt install awesome
+##### Picom (animation fork) build/install
 
-[SDDM]
-sudo apt install sddm qml-module-qtquick-layouts qml-module-qtgraphicaleffects qml-module-qtquick-controls2 libqt5svg5
+Dependencies
+
+    sudo apt install libxext-dev libxcb1-dev libxcb-damage0-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-render-util0-dev libxcb-render0-dev libxcb-randr0-dev libxcb-composite0-dev libxcb-image0-dev libxcb-present-dev libxcb-xinerama0-dev libxcb-glx0-dev libpixman-1-dev libdbus-1-dev libconfig-dev libgl1-mesa-dev  libpcre2-dev  libevdev-dev uthash-dev libev-dev libx11-xcb-dev libpcre++-dev
+
+build/install
+
+    git clone https://github.com/jonaburg/picom
+    cd picom
+    meson --buildtype=release . build
+    ninja -C build
+    sudo ninja -C build install
+
+<br>
+
+##### AwesomeWM
+    sudo apt install awesome
+
+<br>
+
+#### TODO:
+* xfce4 settings after Debian 11 install
+* zsh/oh-my-zsh installation instructions
+* xfce4-panel-profiles installation instructions
+* alacritty/kitty/nvim native binaries
+* tmux conf
+* JetBrainsMono Nerd Font installation
+* ripgrep/fzf
+* Different configurations for 1080p/1440p/4K
+* Memory usage profiling and optimization
 
