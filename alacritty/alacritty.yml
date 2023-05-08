@@ -29,11 +29,11 @@ env:
 
 window:
   opacity: 1.00
-
-  padding:
-   x: 16
-   y: 16
-
+  dynamic_padding: true
+  # padding:
+  #  x: 16
+  #  y: 16
+  #
 
 import:
   # uncomment the flavour you want below:
