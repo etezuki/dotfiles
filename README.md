@@ -67,6 +67,8 @@ build/install
     sudo desktop-file-install extra/linux/Alacritty.desktop
     sudo update-desktop-database
 
+###### Alacritty catppuccin theme
+    git clone https://github.com/catppuccin/alacritty.git ~/.config/alacritty/catppuccin
 
 
 #### TODO:
