@@ -47,6 +47,28 @@ build/install
 
 <br>
 
+
+##### Alacritty
+    sudo apt install curl git cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+    
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    (option 1)
+    
+    source $HOME/.cargo/env
+    rustup override set stable
+    rustup update stable
+    
+    git clone https://github.com/alacritty/alacritty.git
+    cd alacritty/
+    cargo build --release
+    infocmp alacritty
+    sudo cp target/release/alacritty /usr/local/bin
+    sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+    sudo desktop-file-install extra/linux/Alacritty.desktop
+    sudo update-desktop-database
+
+
+
 #### TODO:
 * xfce4 settings after Debian 11 install
 * zsh/oh-my-zsh installation instructions
