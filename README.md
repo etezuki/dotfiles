@@ -71,14 +71,23 @@ build/install
     git clone https://github.com/catppuccin/alacritty.git ~/.config/alacritty/catppuccin
 
 
+##### fzf
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+    ~/.fzf/install
+
+##### ripgrep
+    curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
+    sudo dpkg -i ripgrep_13.0.0_amd64.deb
+
+##### fd
+https://github.com/sharkdp/fd#installation
+
 #### TODO:
 * xfce4 settings after Debian 11 install
 * zsh/oh-my-zsh installation instructions
 * xfce4-panel-profiles installation instructions
-* alacritty/kitty/nvim native binaries
-* tmux conf
+* kitty/nvim native binaries
 * JetBrainsMono Nerd Font installation
-* ripgrep/fzf
 * Different configurations for 1080p/1440p/4K
 * Memory usage profiling and optimization
 
